@@ -19,3 +19,8 @@
 - Se restringe el consumo de las APIs solo a usuarios autenticados.
 - Se agrega un JWTConverter personalizado para obtener los roles y el scope del JWT para luego hacer restricciones.
 - Se permite solo a usuarios con rol “user” consumir el endpoint bills/all.
+---
+
+*Diagrama del Sistema*
+
+![img.png](img.png)
