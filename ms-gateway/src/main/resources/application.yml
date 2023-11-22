@@ -1,0 +1,41 @@
+# Configuraciones del servidor
+server:
+  port: 8080
+# Configuraciones de eureka
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+# Configuraciones de spring cloud - se agrega la security y el registration
+spring:
+  application:
+    name: ms-gateway
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak-prueba:
+            issuer-uri: http://localhost:8090/realms/parcial-dh-back-2
+        registration:
+          keycloak-prueba:
+            client-id: parcial-client
+            client-secret: g16KkSmy5zJhY7YgjarARzoSbnmfDlt5
+            scope:
+              - openid
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
+  cloud:
+    gateway:
+      default-filters: TokenRelay
+      routes:
+        - id: ms-bill
+          uri: lb://ms-bill
+          predicates:
+            - Path=/api/v1/**
+          filters:
+            - StripPrefix=2
