@@ -3,7 +3,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8090/realms/parcial-dh-back-2
+          issuer-uri: http://localhost:8090/realms/bermudezEstefania
   application:
     name: ms-bill
   datasource:

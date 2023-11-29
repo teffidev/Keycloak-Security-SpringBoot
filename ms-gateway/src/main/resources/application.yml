@@ -20,10 +20,11 @@ spring:
       client:
         provider:
           keycloak-prueba:
-            issuer-uri: http://localhost:8090/realms/parcial-dh-back-2
+            issuer-uri: http://localhost:8090/realms/bermudezEstefania
         registration:
           keycloak-prueba:
             client-id: parcial-client
+            client-name: ParcialBackend
             client-secret: g16KkSmy5zJhY7YgjarARzoSbnmfDlt5
             scope:
               - openid
@@ -34,8 +35,14 @@ spring:
       default-filters: TokenRelay
       routes:
         - id: ms-bill
-          uri: lb://ms-bill
+          uri: lb://ms-bills
           predicates:
             - Path=/api/v1/**
+          filters:
+            - StripPrefix=2
+        - id: ms-users
+          uri: lb://ms-users
+          predicates:
+            - Path=/api/v2/**
           filters:
             - StripPrefix=2

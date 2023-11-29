@@ -5,6 +5,7 @@ import com.msbills.repositories.BillRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -14,7 +15,18 @@ public class BillService {
     private final BillRepository repository;
 
     public List<Bill> getAllBill() {
+
         return repository.findAll();
+    }
+
+    public void createBill(Bill bill) {
+
+        repository.save(bill);
+    }
+
+    public List<Bill> getBillsByUserId(String userId) {
+
+        return repository.findAllById(Collections.singleton(userId));
     }
 
 }

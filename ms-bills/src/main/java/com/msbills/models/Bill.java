@@ -5,9 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 @Getter
@@ -15,12 +13,15 @@ import org.hibernate.annotations.GenericGenerator;
 @NoArgsConstructor
 @Entity
 @Table
+@EqualsAndHashCode
+@AllArgsConstructor
 public class Bill {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     private String idBill;
+    private String idUser;
 
     private String customerBill;
 
