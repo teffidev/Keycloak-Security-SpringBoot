@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<User> getUserWithBills(@PathVariable String userId) {
+    public ResponseEntity<User> getUserWithBills(@PathVariable("userId") String userId) {
         User user = userService.getBillsByUserId(userId);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }

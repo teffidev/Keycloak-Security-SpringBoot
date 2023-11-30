@@ -1,14 +1,15 @@
 server:
   port: 8081
+  context-path: /users/
 
 spring:
+  application:
+    name: ms-users
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8090/realms/bermudezEstefania
-  application:
-    name: ms-users
 
 final:
   keycloak:
@@ -24,3 +25,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always

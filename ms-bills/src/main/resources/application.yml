@@ -1,11 +1,11 @@
 spring:
+  application:
+    name: ms-bill
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8090/realms/bermudezEstefania
-  application:
-    name: ms-bill
   datasource:
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
     driverClassName: org.h2.Driver
@@ -26,7 +26,8 @@ spring:
       path: /h2-console
 
 server:
-  port: ${PORT:0}
+  port: 8082
+  context-path: /bills/
 
 eureka:
   instance:
@@ -35,3 +36,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always

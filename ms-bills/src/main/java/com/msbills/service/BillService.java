@@ -20,13 +20,11 @@ public class BillService {
     }
 
     public void createBill(Bill bill) {
-
         repository.save(bill);
     }
 
-    public List<Bill> getBillsByUserId(String userId) {
-
-        return repository.findAllById(Collections.singleton(userId));
+    public List<Bill> getBillsByIdUser(String idUser) {
+        return repository.getBillsByIdUser(idUser);
     }
 
 }

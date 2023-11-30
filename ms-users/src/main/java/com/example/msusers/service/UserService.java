@@ -20,18 +20,22 @@ public class UserService {
         this.feignBillRepository = feignBillRepository;
     }
 
-    public User findById(String Id) {
-        return userRepository.findById(Id);
-    }
-
     public List<User> getUsers() {
         return userRepository.getUsers();
     }
 
-    public User getBillsByUserId(String Id) {
-        User user = userRepository.findById(Id);
-        ResponseEntity<List<Bill>> bills = feignBillRepository.getBillsByUserId(Id);
-        user.setBills(bills.getBody());
+    public User getBillsByUserId(String id) {
+
+        User user = null;
+        try {
+            user = userRepository.findById(id);
+            List<Bill> bills = feignBillRepository.getBillsByUserId(id);
+            if (user.getId() != null) {
+                user.setBills(bills);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return user;
     }

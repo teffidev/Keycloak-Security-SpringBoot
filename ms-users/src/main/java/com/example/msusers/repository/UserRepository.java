@@ -5,6 +5,7 @@ import com.example.msusers.domain.User;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,34 +13,26 @@ import java.util.stream.Collectors;
 
 @Repository
 public class UserRepository implements IUserRepository {
-
     private final Keycloak keycloak;
-    private final BillRepository billRepository;
 
-    public UserRepository(Keycloak keycloak, BillRepository billRepository) {
+    private final FeignBillRepository feignBillRepository;
+
+    public UserRepository(Keycloak keycloak, FeignBillRepository feignBillRepository) {
         this.keycloak = keycloak;
-        this.billRepository = billRepository;
+        this.feignBillRepository = feignBillRepository;
     }
 
     @Value("${final.keycloak.realm}")
     private String realm;
 
     private User toUser(UserRepresentation userRepresentation) {
-        List<Bill> bills = null;
-
-        try {
-            bills = billRepository
-                    .findByUserId(userRepresentation.getId());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         return new User(
                 userRepresentation.getId(),
                 userRepresentation.getUsername(),
                 userRepresentation.getEmail(),
                 userRepresentation.getFirstName(),
-                bills
+                null
         );
     }
 

@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,18 +36,8 @@ public class BillController {
         }
     }
 
-    @GetMapping("/user/{userId}")
-    @PreAuthorize("isAuthenticated()")
-    public ResponseEntity<List<Bill>> getBillsByUserId(@PathVariable String userId, Authentication authentication) {
-        try {
-            if (authentication.isAuthenticated()) {
-                List<Bill> userBills = service.getBillsByUserId(userId);
-                return ResponseEntity.ok(userBills);
-            } else {
-                return ResponseEntity.status(401).body(null);
-            }
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body(null);
-        }
+    @GetMapping("/user")
+    public List<Bill> getBillsByIdUser(@RequestParam("userId") String userId) {
+        return service.getBillsByIdUser(userId);
     }
 }

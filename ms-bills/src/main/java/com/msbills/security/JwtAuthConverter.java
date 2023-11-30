@@ -5,34 +5,28 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.jwt.Jwt;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class JwtAuthConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
 
-    private final static String CLIENT_NAME = "parcial-client";
-
     public Collection<GrantedAuthority> convert(Jwt source) {
+
         Collection<GrantedAuthority> authorities = new ArrayList<>();
 
+
         Map<String, Object> realmRolesAccess = source.getClaim("realm_access");
+        List<String> groups = source.getClaim("group-token");
+
 
         if (realmRolesAccess != null && !realmRolesAccess.isEmpty()) {
             authorities.addAll(extractRoles(realmRolesAccess));
         }
 
-        Map<String, Object> resourceAccess = source.getClaim("resource_access");
-
-        Map<String, Object> resource;
-
-        Collection<String> resourceRoles;
-
-        if (resourceAccess != null && (resource = (Map<String, Object>) resourceAccess.get(CLIENT_NAME)) != null
-                && (resourceRoles = (Collection<String>) resource.get("roles")) != null) {
-            authorities.addAll(extractClientRoles(resourceRoles));
+        if (groups != null && !groups.isEmpty()) {
+            for (String group : groups) {
+                authorities.add(new SimpleGrantedAuthority(group));
+            }
         }
 
         return authorities;
@@ -42,13 +36,6 @@ public class JwtAuthConverter implements Converter<Jwt, Collection<GrantedAuthor
         return ((List<String>) realmRolesAccess.get("roles"))
                 .stream().map(roleMap -> "ROLE_" + roleMap)
                 .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toList());
-    }
-
-    private static Collection<GrantedAuthority> extractClientRoles(Collection<String> resourceRoles) {
-        return resourceRoles
-                .stream()
-                .map(roleMap -> new SimpleGrantedAuthority("ROLE_" + roleMap))
                 .collect(Collectors.toList());
     }
 }

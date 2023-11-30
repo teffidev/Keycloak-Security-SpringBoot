@@ -4,22 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d441251a-d3cf-4bb4-96fb-2947feb6f647" name="Changes" comment="">
+    <list default="true" id="f0cfdb48-f1fb-4095-9941-944be2304a9a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-bills/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/controller/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/controller/BillController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/repositories/BillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/repositories/BillRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/JwtAuthConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/JwtAuthConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/ServerSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/ServerSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/service/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/service/BillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms-users/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/domain/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/domain/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/BillRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/FeignBillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/FeignBillRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/domain/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/domain/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/repository/BillRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/repository/FeignBillRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/repository/FeignBillRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/target/classes/com/example/msusers/service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,10 +48,10 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2YmITEThxJhZzXGJfbbI8hocJoA" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2YuLRSIvJDvLNl7ienmLmPIjcCe" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,19 +61,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/DH/Bimestre_IX/Back_II/PARCIAL/Keycloak-SpringBoot/ms-users/src/main/java/com/example/msusers",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\DH\Bimestre_IX\Back_II\PARCIAL\Keycloak-SpringBoot\ms-users\src\main\java\com\example\msusers" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.MsUsersApplication">
+  <component name="RunManager" selected="Application.MsDiscoveryApplication">
     <configuration name="MsBillsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.msbills.MsBillsApplication" />
       <module name="ms-bills" />
@@ -115,19 +123,19 @@
       <list>
         <item itemvalue="Application.MsBillsApplication" />
         <item itemvalue="Application.MsUsersApplication" />
-        <item itemvalue="Application.MsDiscoveryApplication" />
         <item itemvalue="Application.MsGatewayApplication" />
+        <item itemvalue="Application.MsDiscoveryApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d441251a-d3cf-4bb4-96fb-2947feb6f647" name="Changes" comment="" />
-      <created>1701124333377</created>
+      <changelist id="f0cfdb48-f1fb-4095-9941-944be2304a9a" name="Changes" comment="" />
+      <created>1701370509625</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1701124333377</updated>
+      <updated>1701370509625</updated>
     </task>
     <servers />
   </component>
