@@ -24,3 +24,43 @@
 *Diagrama del Sistema*
 
 ![img.png](img.png)
+
+---
+
+Ahora trabajamos en el sistema de faturación. Para esta etapa vamos a trabajar en dos funcionalidades nuevas:
+- Los diferentes proveedores de facturas podrán crear facturas.
+- Los usuarios podrán buscar sus facturas.
+
+![img_1.png](img_1.png)
+
+*Tomando en cuenta el diagrama se nos pide:
+
+*En Keycloak:*
+- Crear un grupo llamado PROVIDERS.
+- Asignar usuarios a este nuevo grupo.
+- Crear un cliente que permita autenticarse utilizando las credenciales del cliente
+(client credentials).
+---
+
+*En bills-service:*
+- Crear un endpoint que nos permita dar de alta facturas. Restricciones:
+- Solo los usuarios pertenecientes al grupo PROVIDERS podrán dar de alta
+facturas. Leer del JWT el listado de grupos para luego validar en el controller.
+- Crear un endpoint que nos permita buscar facturas por ID de usuario. Restricciones:
+- Usuarios autenticados.
+---
+
+*En users-service:*
+- Crear el microservicio y agregar un endpoint que nos permita buscar a un usuario y
+sus facturas.
+- Buscar el usuario por ID utilizando Keycloak REST Admin Client.
+- Para buscar las facturas, utilizar Feign. Configurar el cliente de Feign para
+autenticarnos y obtener el token de Keycloak cuando enviamos la petición.
+---
+
+*En API Gateway:*
+- Agregar al ruteo el microservicio de usuarios.
+---
+
+- TIP: Para obtener el access token y utilizarlo desde Postman podemos completar los
+siguientes campos en Postman y hacer clic “Get New Access Token”.
