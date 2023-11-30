@@ -26,7 +26,7 @@ public class BillController {
     }
 
     @PostMapping("/create")
-    @PreAuthorize("hasAuthority('PROVIDERS')")
+    @PreAuthorize("hasAuthority('/PROVIDERS')")
     public ResponseEntity<String> createBill(@Validated @RequestBody Bill bill) {
         try {
             service.createBill(bill);

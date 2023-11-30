@@ -1,6 +1,5 @@
 package com.example.msusers.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 @Getter

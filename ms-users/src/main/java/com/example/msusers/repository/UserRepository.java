@@ -1,11 +1,9 @@
 package com.example.msusers.repository;
 
-import com.example.msusers.domain.Bill;
 import com.example.msusers.domain.User;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
