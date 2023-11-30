@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d441251a-d3cf-4bb4-96fb-2947feb6f647" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/configuration/KeycloakConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/configuration/feign/FeignInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/loadBalancer/LoadBalancerUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/BillRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/FeignBillRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/userSecurity/JwtAuthConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-users/src/main/java/com/example/msusers/userSecurity/ServerSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/MsBillsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/MsBillsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/controller/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/controller/BillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/models/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/models/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/JwtAuthConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/JwtAuthConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/ServerSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/security/ServerSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/service/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/java/com/msbills/service/BillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-bills/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ms-bills/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-users/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-users/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "E:/DH/Bimestre_IX/Back_II/PARCIAL/Keycloak-SpringBoot/ms-users/src/main/java/com/example/msusers",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -81,7 +58,7 @@
       <recent name="E:\DH\Bimestre_IX\Back_II\PARCIAL\Keycloak-SpringBoot\ms-users\src\main\java\com\example\msusers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MsBillsApplication">
+  <component name="RunManager" selected="Application.MsUsersApplication">
     <configuration name="MsBillsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.msbills.MsBillsApplication" />
       <module name="ms-bills" />
@@ -136,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MsUsersApplication" />
         <item itemvalue="Application.MsBillsApplication" />
+        <item itemvalue="Application.MsUsersApplication" />
         <item itemvalue="Application.MsDiscoveryApplication" />
         <item itemvalue="Application.MsGatewayApplication" />
       </list>
